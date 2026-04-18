@@ -1,3 +1,3 @@
-from core.control import start
+from core.core_control import start
 
 start()
