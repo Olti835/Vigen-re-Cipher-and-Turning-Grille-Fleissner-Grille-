@@ -1,4 +1,4 @@
-from core.validation import mode, alg_validation
+from core.validation import mode, alg_validation, validate_holes
 
 def get_text():
     m = input("Text: ")
@@ -17,10 +17,25 @@ def get_mode():
             return m
         
 def get_algorithm():
-    print("\nV -> Vgenere, t -> Turning Grille")
+    print("\nv -> Vgenere, t -> Turning Grille")
     while True:
         m = input('Choose algorithm v/t: ')
         valid, msg = alg_validation(m)
         print(msg)
         if valid:
-            return m
+            return m.lower()
+        
+def get_holes(size):
+    while True:
+        raw = input("Enter holes (e.g. (0,1),(1,3),(2,0)): ")
+
+        try:
+            holes = eval(raw)
+            valid, msg = validate_holes(holes, size)
+            print(msg)
+
+            if valid:
+                return holes
+
+        except:
+            print("\nInvalid format. Example: (0,1),(1,3)")
