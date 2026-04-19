@@ -1,5 +1,5 @@
 from core.inputs import get_mode, get_algorithm, get_text, get_key, get_size, get_holes
-from algorithms.algorithm_control import use_alg
+from algorithms.algorithm_control import use_vigenere, use_grille
 
 def start():
     while True:
@@ -8,14 +8,14 @@ def start():
         if(algorithm == "v"):
             text = get_text()
             key = get_key()
+            result = use_vigenere(mode, algorithm, text, key)
         else:
             text = get_text()
             size = get_size()
             holes = get_holes(size)
+            result = use_grille(mode, algorithm, text, size, holes)
 
-        
         print(f"Sending Data, Mode: {mode}, Agorithm: {algorithm}")
-        result = use_alg(mode, algorithm, text, key)
 
         print(result)
         return "END"

@@ -14,6 +14,11 @@ def alg_validation(algorithm):
         return True, "Good. \n"
 
     return False, "\nInvalid input. Use V or T."
+
+def validate_size(size):
+    if size.is_integer():
+        return True, "\nSize validated."
+    return False, "Invalid size. Write an integer value."
  
 def validate_holes(holes, size):
     if not isinstance(holes, list):
