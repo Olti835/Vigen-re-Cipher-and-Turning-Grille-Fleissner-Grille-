@@ -1,4 +1,4 @@
-from core.validation import mode, alg_validation, validate_holes
+from core.validation import mode, alg_validation, validate_holes, validate_size
 
 def get_text():
     m = input("Text: ")
@@ -24,6 +24,13 @@ def get_algorithm():
         print(msg)
         if valid:
             return m.lower()
+        
+def get_size():
+    m = input("Size: ")
+    valid, msg = validate_size(m)
+    print(msg)
+    if valid:
+        return m
         
 def get_holes(size):
     while True:
