@@ -25,6 +25,7 @@ Per ekzekutimin e projekt pas hapjes se folderit, shkruajme komanden  **py -m co
 ## Shembull
 ### Enkriptimi
 Le te themi se kemi perdorur modin "enc" dhe algoritmin "v". 
+
 Hapi 1:<br>
 Japim tekstin dhe key.<br>
 Text: HELLO <br>
@@ -74,9 +75,11 @@ Keto shifra i mbledhim me ord('A') ose me 65 dhe i kthejme ne shkronja permes ut
 86 → V <br>
 83 → S <br>
 Ciphertext: RIJVS <br>
+
  
 ### Dekriptimi
 Le te themi se kemi perdorur modin "dec" dhe algoritmin "v". <br>
+
 Hapi 1: <br>
 Japim tekstin dhe key.<br>
 Text: RIJVS<br>
@@ -103,7 +106,7 @@ J → 74 - 65 = 9<br>
 V → 86 - 65 = 21<br>
 S → 83 - 65 = 18<br>
 <br>
-Key: 
+Key: <br>
 K → 75 - 65 = 10 <br>
 E → 69 - 65 = 4 <br>
 Y → 89 - 65 = 24 <br>
