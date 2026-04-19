@@ -25,107 +25,107 @@ Per ekzekutimin e projekt pas hapjes se folderit, shkruajme komanden  **py -m co
 ## Shembull
 ### Enkriptimi
 Le te themi se kemi perdorur modin "enc" dhe algoritmin "v". 
-Hapi 1:
-Japim tekstin dhe key.
-Text: HELLO
-Key: KEY
+Hapi 1:<br>
+Japim tekstin dhe key.<br>
+Text: HELLO <br>
+Key: KEY <br>
 
-Hapi 2:
-Funksioni start shikon te dhenat dhe i dergon tek funksioni use_vigenere()
+Hapi 2: <br>
+Funksioni start shikon te dhenat dhe i dergon tek funksioni use_vigenere()v<br>
 
-Hapi 3: 
-Funksioni use_vigenere() shikon te dhenat (nese eshte enc apo dec) dhe therret funksionin vigenere_encryption()
+Hapi 3: <br> 
+Funksioni use_vigenere() shikon te dhenat (nese eshte enc apo dec) dhe therret funksionin vigenere_encryption() <br>
 
-Hapi 4:
-Ne vigenere_encrypt() key behet i gjate sa teksti, key-t i shtohen ne fund shkronjat e tij nga fillimi deri sa te behet i gjat sa texti.
-Tani kemi:
-Text: HELLO
-Key: KEYKE
+Hapi 4: <br>
+Ne vigenere_encrypt() key behet i gjate sa teksti, key-t i shtohen ne fund shkronjat e tij nga fillimi deri sa te behet i gjat sa texti. <br>
+Tani kemi: <br>
+Text: HELLO <br>
+Key: KEYKE <br>
 
-Hapi 5:
-Text dhe key kthehen ne ASCII dhe ju hiqet vlera ord('A') apo 65.
-Text: 
-H → 72 - 65 = 7
-E → 69 - 65 = 4
-L → 76 - 65 = 11
-L → 76 - 65 = 11
-O → 79 - 65 = 14
+Hapi 5: <br>
+Text dhe key kthehen ne ASCII dhe ju hiqet vlera ord('A') apo 65. <br>
+Text: <br>
+H → 72 - 65 = 7 <br>
+E → 69 - 65 = 4 <br>
+L → 76 - 65 = 11 <br>
+L → 76 - 65 = 11 <br>
+O → 79 - 65 = 14 <br>
 
-Key: 
-K → 75 - 65 = 10
-E → 69 - 65 = 4
-Y → 89 - 65 = 24 
-K → 75 - 65 = 10
-E → 69 - 65 = 4
+Key: <br>
+K → 75 - 65 = 10 <br>
+E → 69 - 65 = 4 <br>
+Y → 89 - 65 = 24 <br>
+K → 75 - 65 = 10 <br>
+E → 69 - 65 = 4 <br>
 
-Hapi 6:
-Mblidhen Key dhe Text shkrinje per shkronje dhe aplikojme mod 26
-7 + 10 = 17 mod 26 = 17
-4 + 4 = 8 mod 26 = 8
-11 + 24 = 35 mod 26 = 9
-11 + 10 = 21 mod 26 = 21
-14 + 4 = 18 mod 26 = 18
+Hapi 6: <br>
+Mblidhen Key dhe Text shkrinje per shkronje dhe aplikojme mod 26 <br>
+7 + 10 = 17 mod 26 = 17 <br>
+4 + 4 = 8 mod 26 = 8 <br>
+11 + 24 = 35 mod 26 = 9 <br>
+11 + 10 = 21 mod 26 = 21 <br>
+14 + 4 = 18 mod 26 = 18 <br>
 
-Hapi 7: 
-Keto shifra i mbledhim me ord('A') ose me 65 dhe i kthejme ne shkronja permes utf-8.
-82 → R
-73 → I
-74 → J
-86 → V
-83 → S
-Ciphertext: RIJVS
-
+Hapi 7: <br>
+Keto shifra i mbledhim me ord('A') ose me 65 dhe i kthejme ne shkronja permes utf-8. <br>
+82 → R <br>
+73 → I <br>
+74 → J <br>
+86 → V <br>
+83 → S <br>
+Ciphertext: RIJVS <br>
+ 
 ### Dekriptimi
-Le te themi se kemi perdorur modin "dec" dhe algoritmin "v". 
-Hapi 1:
-Japim tekstin dhe key.
-Text: RIJVS
-Key: KEY
+Le te themi se kemi perdorur modin "dec" dhe algoritmin "v". <br>
+Hapi 1: <br>
+Japim tekstin dhe key.<br>
+Text: RIJVS<br>
+Key: KEY<br>
 
-Hapi 2:
-Funksioni start shikon te dhenat dhe i dergon tek funksioni use_vigenere()
+Hapi 2:<br>
+Funksioni start shikon te dhenat dhe i dergon tek funksioni use_vigenere()<br>
 
-Hapi 3: 
-Funksioni use_vigenere() shikon te dhenat (nese eshte enc apo dec) dhe therret funksionin vigenere_decryption()
+Hapi 3: <br>
+Funksioni use_vigenere() shikon te dhenat (nese eshte enc apo dec) dhe therret funksionin vigenere_decryption()<br>
 
-Hapi 4:
-Ne vigenere_decrypt() key behet i gjate sa teksti, key-t i shtohen ne fund shkronjat e tij nga fillimi deri sa te behet i gjat sa texti.
-Tani kemi:
-Text: RIJVS
-Key: KEYKE
+Hapi 4:<br>
+Ne vigenere_decrypt() key behet i gjate sa teksti, key-t i shtohen ne fund shkronjat e tij nga fillimi deri sa te behet i gjat sa texti.<br>
+Tani kemi:<br>
+Text: RIJVS<br>
+Key: KEYKE<br>
 
-Hapi 5:
-Text dhe key kthehen ne ASCII dhe ju hiqet vlera ord('A') apo 65.
-Text: 
-R → 82 - 65 = 17
-I → 73 - 65 = 8
-J → 74 - 65 = 9
-V → 86 - 65 = 21
-S → 83 - 65 = 18
-
+Hapi 5:<br>
+Text dhe key kthehen ne ASCII dhe ju hiqet vlera ord('A') apo 65.<br>
+Text: <br>
+R → 82 - 65 = 17<br>
+I → 73 - 65 = 8<br>
+J → 74 - 65 = 9<br>
+V → 86 - 65 = 21<br>
+S → 83 - 65 = 18<br>
+<br>
 Key: 
-K → 75 - 65 = 10
-E → 69 - 65 = 4
-Y → 89 - 65 = 24 
-K → 75 - 65 = 10
-E → 69 - 65 = 4
+K → 75 - 65 = 10 <br>
+E → 69 - 65 = 4 <br>
+Y → 89 - 65 = 24 <br>
+K → 75 - 65 = 10<br>
+E → 69 - 65 = 4<br>
+<br>
+Hapi 6:<br>
+Text i zbresim key shkrinje per shkronje dhe aplikojme mod 26<br>
+17 - 10 = 7 mod 26 = 7<br>
+8 - 4 = 4 mod 26 = 4<br>
+9 - 24 = -15 mod 26 = 11<br>
+21 - 10 = 11 mod 26 = 11<br>
+18 - 4 = 14 mod 26 = 14<br>
 
-Hapi 6:
-Text i zbresim key shkrinje per shkronje dhe aplikojme mod 26
-17 - 10 = 7 mod 26 = 7
-8 - 4 = 4 mod 26 = 4
-9 - 24 = -15 mod 26 = 11
-21 - 10 = 11 mod 26 = 11
-18 - 4 = 14 mod 26 = 14
-
-Hapi 7: 
-Keto shifra i mbledhim me ord('A') ose me 65 dhe i kthejme ne shkronja permes utf-8.
-7 + 65 = 72 → H
-4 + 65 = 69 → E
-11 + 65 = 76 → L
-11 + 65 = 76 → L
-14 + 65 = 79 → O
-Plaintext: HELLO
+Hapi 7: <br>
+Keto shifra i mbledhim me ord('A') ose me 65 dhe i kthejme ne shkronja permes utf-8.<br>
+7 + 65 = 72 → H<br>
+4 + 65 = 69 → E<br>
+11 + 65 = 76 → L<br>
+11 + 65 = 76 → L<br>
+14 + 65 = 79 → O<br>
+Plaintext: HELLO<br>
 
 
 
