@@ -59,7 +59,7 @@ K → 75 - 65 = 10 <br>
 E → 69 - 65 = 4 <br>
 
 Hapi 6: <br>
-Mblidhen Key dhe Text shkrinje per shkronje dhe aplikojme mod 26 <br>
+Mblidhen Key dhe Text shkronje per shkronje dhe aplikojme mod 26 <br>
 7 + 10 = 17 mod 26 = 17 <br>
 4 + 4 = 8 mod 26 = 8 <br>
 11 + 24 = 35 mod 26 = 9 <br>
@@ -111,7 +111,7 @@ K → 75 - 65 = 10<br>
 E → 69 - 65 = 4<br>
 <br>
 Hapi 6:<br>
-Text i zbresim key shkrinje per shkronje dhe aplikojme mod 26<br>
+Text i zbresim Key shkronje per shkronje dhe aplikojme mod 26<br>
 17 - 10 = 7 mod 26 = 7<br>
 8 - 4 = 4 mod 26 = 4<br>
 9 - 24 = -15 mod 26 = 11<br>
