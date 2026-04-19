@@ -22,7 +22,7 @@ Rezultatet e enkriptimit/dekriptimit pastaj kthehen ne funksionin start() dhe pr
 ## Perdorimi
 Per ekzekutimin e projekt pas hapjes se folderit, shkruajme komanden  **py -m core/ui**. Aty do te pyetesh per enc/dec (enkriptim/dekriptim), pastaj jep llojin e algoritmit V ose t (Vigenere ose Turning Grille) dhe ne fund jep te dhenat si teksti, key etj.
 
-## 🧱 Project Structure
+## Project Structure
 
 ```text
 project/
