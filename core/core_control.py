@@ -15,7 +15,6 @@ def start():
             holes = get_holes(size)
             result = use_grille(mode, algorithm, text, size, holes)
 
-        print(f"Sending Data, Mode: {mode}, Agorithm: {algorithm}")
 
         print(result)
         return "END"

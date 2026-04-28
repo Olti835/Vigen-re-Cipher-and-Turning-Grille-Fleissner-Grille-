@@ -26,23 +26,38 @@ def get_algorithm():
             return m.lower()
         
 def get_size():
-    m = input("Size: ")
-    valid, msg = validate_size(m)
-    print(msg)
-    if valid:
-        return m
+    while True:
+        m = input("Size: ")
+        valid, size, msg = validate_size(m)
+        print(msg)
+
+        if valid:
+            return size 
         
 def get_holes(size):
     while True:
         raw = input("Enter holes (e.g. (0,1),(1,3),(2,0)): ")
 
         try:
-            holes = eval(raw)
+            holes = []
+
+            # Heq hapësirat
+            raw = raw.replace(" ", "")
+
+            # Ndaj tuples
+            parts = raw.split("),")
+
+            for p in parts:
+                p = p.replace("(", "").replace(")", "")
+                r, c = p.split(",")
+
+                holes.append((int(r), int(c)))
+
             valid, msg = validate_holes(holes, size)
             print(msg)
 
             if valid:
                 return holes
 
-        except:
-            print("\nInvalid format. Example: (0,1),(1,3)")
+        except Exception:
+            print("\nInvalid format. Example: (0,1),(1,3),(2,0)")

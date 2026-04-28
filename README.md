@@ -262,4 +262,113 @@ Keto shifra i mbledhim me ord('A') ose me 65 dhe i kthejme ne shkronja permes ut
 Plaintext: HELLO<br>
 
 
+## Turning Grille Cipher
+
+#Shembull konkret
+
+**Input:**
+
+
+Plaintext: HELLOWORLD
+Size: 4
+Holes: (0,0),(0,1),(1,0),(1,1)
+
+
+---
+
+## Përpunimi
+
+# 1. Madhësia e grid-it
+
+
+size = 4
+grid = 4 x 4 = 16 qeliza
+
+
+Plaintext ka 10 shkronja, prandaj bëhet **padding** që të mbushë grid-in:
+
+
+HELLOWORLDXXXXXX
+
+
+---
+
+# 2. Vendosja në grid
+
+Algoritmi funksionon kështu:
+
+- Merr koordinatat e `holes`
+- Vendos shkronjat në ato pozita
+- Rrotullon holes 90° (clockwise)
+- Përsërit procesin 4 herë (0°, 90°, 180°, 270°)
+- Në fund grid-i mbushet plotësisht
+
+---
+
+## Output (Ciphertext)
+
+Rezultati i enkriptimit është:
+
+
+heowllorxxldxxxx
+
+
+Ky është një **transposition** i tekstit origjinal:
+- shkronjat janë të njëjta
+- vetëm renditja ndryshon
+
+---
+
+## Pse ka rëndësi gjatësia e tekstit?
+
+Në :contentReference[oaicite:0]{index=0}:
+
+- Teksti duhet të mbushë një **grid katror**:
+
+
+size * size
+
+
+- Nëse teksti është më i shkurtër → shtohen karaktere (`X`)
+- Nëse është më i gjatë → pritet (truncate)
+
+---
+
+## 📏 Rregulli kryesor
+
+
+len(plaintext) ≤ size * size
+
+dhe zakonisht:
+
+len(plaintext) = size * size (pas padding)
+
+
+---
+
+## Lidhja mes gjatësisë dhe “përzierjes”
+
+- Tekst i shkurtër → grid i vogël → më pak përzierje
+- Tekst i gjatë → grid i madh → më shumë përzierje
+
+Shembuj:
+
+| Size | Qeliza | Holes |
+|------|--------|-------|
+| 4    | 16     | 4     |
+| 6    | 36     | 9     |
+| 8    | 64     | 16    |
+
+---
+
+## Përfundim
+
+- Ciphertext varet nga:
+  - plaintext
+  - size
+  - holes (key)
+- Nuk ka një rezultat unik universal
+- Gjatësia e tekstit është kritike sepse përcakton strukturën e grid-it
+
+
 
