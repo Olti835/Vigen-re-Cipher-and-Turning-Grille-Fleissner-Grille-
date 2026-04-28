@@ -5,10 +5,16 @@ from algorithms.vigenere_encrypt import vigenere_encrypt
 
 def use_vigenere(mode, algorithm, text, key):
     if (algorithm == 'v' and mode == 'enc'):
-        print(vigenere_encrypt(text, key))
-    else: print(vigenere_decrypt(text, key))
+        ciphertext = vigenere_encrypt(text, key)
+        print(ciphertext)
+    else: 
+        plaintext = vigenere_decrypt(text, key)
+        print(plaintext)
 
 def use_grille(mode, algorithm, text, size, holes):
     if (algorithm == 't' and mode == 'enc'):
-        print(turning_grille_encrypt(text, size, holes))
-    else: print(turning_grille_decrypt(text, size, holes))
+        ciphertext = turning_grille_encrypt(text, size, holes)
+        print(ciphertext)
+    else:
+        plaintext = turning_grille_decrypt(text, size, holes)
+        print(plaintext)
